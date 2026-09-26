@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SentinelAI - Incident Intelligence</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        <div class="logo-icon">✦</div>
+        <span>Sentinel<span>AI</span></span>
+    </div>
+
+    <nav>
+        <a href="#dashboard" class="active">Dashboard</a>
+        <a href="#analysis">AI Analysis</a>
+        <a href="#telemetry">Telemetry</a>
+        <a href="#actions">Actions</a>
+        <a href="#audit">Audit Trail</a>
+    </nav>
+
+    <div class="system-status">
+        <span class="status-dot"></span>
+        Systems Operational
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="dashboard">
+
+    <div class="hero-text">
+
+        <div class="badge">
+            <span>●</span>
+            AI OPERATIONS CENTER
+        </div>
+
+        <h1>
+            Autonomous Incident
+            <span>Diagnosis</span>
+        </h1>
+
+        <p>
+            Investigate production incidents using AI-powered
+            correlation of logs, metrics, traces, deployments
+            and service dependencies.
+        </p>
+
+        <div class="hero-buttons">
+
+            <button
+                class="primary-btn"
+                onclick="startInvestigation()">
+                ✦ Start AI Investigation
+            </button>
+
+            <button
+                class="secondary-btn"
+                onclick="simulateIncident()">
+                Simulate Incident
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- AI VISUAL -->
+
+    <div class="ai-orb">
+
+        <div class="orb-ring"></div>
+
+        <div class="orb">
+
+            <div class="orb-core">
+                AI
+            </div>
+
+        </div>
+
+        <div class="orb-label">
+            <strong>Agent Active</strong>
+            <small>Monitoring 24/7</small>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= INCIDENT OVERVIEW ================= -->
+
+<section class="section">
+
+    <div class="section-header">
+
+        <div>
+            <p class="eyebrow">LIVE OPERATIONS</p>
+            <h2>Incident Overview</h2>
+        </div>
+
+        <div class="incident-id">
+            INC-2026-091
+        </div>
+
+    </div>
+
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+
+            <div class="stat-icon orange">
+                ⚠
+            </div>
+
+            <div>
+                <p>Active Incidents</p>
+                <h3 id="activeIncidents">01</h3>
+            </div>
+
+            <span class="trend">
+                +1
+            </span>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon green">
+                ✓
+            </div>
+
+            <div>
+                <p>Services Healthy</p>
+                <h3>17/18</h3>
+            </div>
+
+            <span class="trend good">
+                94%
+            </span>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon blue">
+                ◈
+            </div>
+
+            <div>
+                <p>AI Confidence</p>
+                <h3 id="confidence">92%</h3>
+            </div>
+
+            <span class="trend good">
+                High
+            </span>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon pink">
+                ◷
+            </div>
+
+            <div>
+                <p>Time to Diagnosis</p>
+                <h3>3m 42s</h3>
+            </div>
+
+            <span class="trend good">
+                -61%
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= AI ANALYSIS ================= -->
+
+<section class="section" id="analysis">
+
+    <div class="section-header">
+
+        <div>
+            <p class="eyebrow">
+                AGENTIC REASONING
+            </p>
+
+            <h2>
+                AI Root Cause Analysis
+            </h2>
+        </div>
+
+        <div
+            class="investigating"
+            id="aiStatus">
+
+            <span></span>
+            Investigation Complete
+
+        </div>
+
+    </div>
+
+
+    <div class="analysis-grid">
+
+
+        <!-- ROOT CAUSE -->
+
+        <div class="root-card">
+
+            <div class="card-heading">
+
+                <div>
+
+                    <span class="mini-label">
+                        LIKELY ROOT CAUSE
+                    </span>
+
+                    <h3>
+                        Database connection
+                        pool exhaustion
+                    </h3>
+
+                </div>
+
+                <div class="confidence-circle">
+                    92%
+                </div>
+
+            </div>
+
+
+            <p class="description">
+
+                The AI agent correlated elevated API latency,
+                database connection saturation and a recent
+                deployment to the payment-service.
+
+            </p>
+
+
+            <div class="evidence">
+
+                <div class="evidence-item">
+
+                    <span class="check">
+                        ✓
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Metrics correlation
+                        </strong>
+
+                        <p>
+                            Database connections increased
+                            43% immediately after deployment.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="evidence-item">
+
+                    <span class="check">
+                        ✓
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Trace evidence
+                        </strong>
+
+                        <p>
+                            78% of slow requests are waiting
+                            for database connections.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="evidence-item">
+
+                    <span class="check">
+                        ✓
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Deployment correlation
+                        </strong>
+
+                        <p>
+                            Version v4.8.2 was deployed
+                            11 minutes before the incident.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- HYPOTHESES -->
+
+        <div class="hypothesis-card">
+
+            <div class="card-title">
+
+                <h3>
+                    Hypothesis Ranking
+                </h3>
+
+                <span>
+                    AI generated
+                </span>
+
+            </div>
+
+
+            <div class="hypothesis">
+
+                <div class="rank">
+                    01
+                </div>
+
+                <div class="hypothesis-info">
+
+                    <strong>
+                        Connection pool exhaustion
+                    </strong>
+
+                    <div class="progress">
+                        <div style="width:92%"></div>
+                    </div>
+
+                </div>
+
+                <b>92%</b>
+
+            </div>
+
+
+            <div class="hypothesis">
+
+                <div class="rank">
+                    02
+                </div>
+
+                <div class="hypothesis-info">
+
+                    <strong>
+                        Database CPU saturation
+                    </strong>
+
+                    <div class="progress">
+                        <div style="width:61%"></div>
+                    </div>
+
+                </div>
+
+                <b>61%</b>
+
+            </div>
+
+
+            <div class="hypothesis">
+
+                <div class="rank">
+                    03
+                </div>
+
+                <div class="hypothesis-info">
+
+                    <strong>
+                        Network latency
+                    </strong>
+
+                    <div class="progress">
+                        <div style="width:34%"></div>
+                    </div>
+
+                </div>
+
+                <b>34%</b>
+
+            </div>
+
+
+            <div class="hypothesis">
+
+                <div class="rank">
+                    04
+                </div>
+
+                <div class="hypothesis-info">
+
+                    <strong>
+                        Memory pressure
+                    </strong>
+
+                    <div class="progress">
+                        <div style="width:18%"></div>
+                    </div>
+
+                </div>
+
+                <b>18%</b>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= TELEMETRY ================= -->
+
+<section class="section" id="telemetry">
+
+    <div class="section-header">
+
+        <div>
+
+            <p class="eyebrow">
+                OBSERVABILITY
+            </p>
+
+            <h2>
+                Telemetry Signals
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="telemetry-grid">
+
+
+        <!-- LOGS -->
+
+        <div class="telemetry-card">
+
+            <div class="telemetry-header">
+
+                <div>
+                    <span class="telemetry-icon">
+                        ▤
+                    </span>
+
+                    <strong>
+                        Logs
+                    </strong>
+                </div>
+
+                <span class="live">
+                    LIVE
+                </span>
+
+            </div>
+
+
+            <div class="log-box">
+
+                <p>
+                    <span>10:42:11</span>
+                    payment-service
+                    <b>ERROR</b>
+                </p>
+
+                <p>
+                    <span>10:42:14</span>
+                    DB connection timeout
+                </p>
+
+                <p>
+                    <span>10:42:19</span>
+                    Connection pool exhausted
+                </p>
+
+                <p>
+                    <span>10:42:27</span>
+                    Request retry initiated
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- METRICS -->
+
+        <div class="telemetry-card">
+
+            <div class="telemetry-header">
+
+                <div>
+                    <span class="telemetry-icon">
+                        ⌁
+                    </span>
+
+                    <strong>
+                        Metrics
+                    </strong>
+                </div>
+
+                <span class="live">
+                    LIVE
+                </span>
+
+            </div>
+
+
+            <div class="metric">
+
+                <div>
+                    <span>API Latency</span>
+                    <b>842 ms</b>
+                </div>
+
+                <div class="metric-bar">
+                    <div style="width:82%"></div>
+                </div>
+
+            </div>
+
+
+            <div class="metric">
+
+                <div>
+                    <span>DB Connections</span>
+                    <b>97%</b>
+                </div>
+
+                <div class="metric-bar">
+                    <div style="width:97%"></div>
+                </div>
+
+            </div>
+
+
+            <div class="metric">
+
+                <div>
+                    <span>Error Rate</span>
+                    <b>8.4%</b>
+                </div>
+
+                <div class="metric-bar">
+                    <div style="width:72%"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- TRACES -->
+
+        <div class="telemetry-card">
+
+            <div class="telemetry-header">
+
+                <div>
+                    <span class="telemetry-icon">
+                        ◎
+                    </span>
+
+                    <strong>
+                        Traces
+                    </strong>
+                </div>
+
+                <span class="live">
+                    LIVE
+                </span>
+
+            </div>
+
+
+            <div class="trace-flow">
+
+                <div class="trace-node">
+
+                    API Gateway
+
+                    <small>
+                        12ms
+                    </small>
+
+                </div>
+
+                <div class="trace-line"></div>
+
+                <div class="trace-node">
+
+                    Payment
+
+                    <small>
+                        841ms
+                    </small>
+
+                </div>
+
+                <div class="trace-line"></div>
+
+                <div class="trace-node danger">
+
+                    Database
+
+                    <small>
+                        812ms
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= INCIDENT TIMELINE ================= -->
+
+<section class="section">
+
+    <div class="section-header">
+
+        <div>
+
+            <p class="eyebrow">
+                CORRELATION ENGINE
+            </p>
+
+            <h2>
+                Incident Timeline
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="timeline">
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-time">
+                10:31 AM
+            </div>
+
+            <div class="timeline-content">
+
+                <strong>
+                    Deployment detected
+                </strong>
+
+                <p>
+                    payment-service upgraded
+                    from v4.8.1 → v4.8.2
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-time">
+                10:36 AM
+            </div>
+
+            <div class="timeline-content">
+
+                <strong>
+                    Latency anomaly
+                </strong>
+
+                <p>
+                    API latency crossed
+                    the 500ms threshold.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot warning"></div>
+
+            <div class="timeline-time">
+                10:39 AM
+            </div>
+
+            <div class="timeline-content">
+
+                <strong>
+                    Database saturation
+                </strong>
+
+                <p>
+                    Connection utilization
+                    reached 97%.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot danger"></div>
+
+            <div class="timeline-time">
+                10:42 AM
+            </div>
+
+            <div class="timeline-content">
+
+                <strong>
+                    Incident declared
+                </strong>
+
+                <p>
+                    Error rate reached 8.4%.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot ai"></div>
+
+            <div class="timeline-time">
+                10:45 AM
+            </div>
+
+            <div class="timeline-content">
+
+                <strong>
+                    AI diagnosis completed
+                </strong>
+
+                <p>
+                    Connection pool exhaustion
+                    identified as primary hypothesis.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SERVICE DEPENDENCY ================= -->
+
+<section class="section">
+
+    <div class="section-header">
+
+        <div>
+
+            <p class="eyebrow">
+                DEPENDENCY GRAPH
+            </p>
+
+            <h2>
+                Service Dependency Map
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="service-map">
+
+        <div class="service healthy">
+
+            <span>
+                API Gateway
+            </span>
+
+            <small>
+                Healthy
+            </small>
+
+        </div>
+
+
+        <div class="connection"></div>
+
+
+        <div class="service healthy">
+
+            <span>
+                Auth Service
+            </span>
+
+            <small>
+                Healthy
+            </small>
+
+        </div>
+
+
+        <div class="connection"></div>
+
+
+        <div class="service warning-service">
+
+            <span>
+                Payment
+            </span>
+
+            <small>
+                Degraded
+            </small>
+
+        </div>
+
+
+        <div class="connection"></div>
+
+
+        <div class="service critical">
+
+            <span>
+                Database
+            </span>
+
+            <small>
+                Critical
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= REMEDIATION ================= -->
+
+<section class="section" id="actions">
+
+    <div class="section-header">
+
+        <div>
+
+            <p class="eyebrow">
+                REMEDIATION
+            </p>
+
+            <h2>
+                Recommended Actions
+            </h2>
+
+        </div>
+
+        <span class="approval-required">
+            Approval Required
+        </span>
+
+    </div>
+
+
+    <!-- ACTION 1 -->
+
+    <div class="action-card">
+
+        <div class="action-number">
+            01
+        </div>
+
+        <div class="action-details">
+
+            <h3>
+                Rollback payment-service
+            </h3>
+
+            <p>
+                Restore version v4.8.1 to remove
+                the suspected connection-pool regression.
+            </p>
+
+            <div class="action-meta">
+
+                <span>
+                    Risk: Medium
+                </span>
+
+                <span>
+                    Estimated: 45 sec
+                </span>
+
+                <span>
+                    Rollback available
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="approve-btn"
+            onclick="approveAction(this)">
+
+            Approve
+
+        </button>
+
+    </div>
+
+
+    <!-- ACTION 2 -->
+
+    <div class="action-card">
+
+        <div class="action-number">
+            02
+        </div>
+
+        <div class="action-details">
+
+            <h3>
+                Increase database connection pool
+            </h3>
+
+            <p>
+                Temporarily increase maximum connections
+                while monitoring database utilization.
+            </p>
+
+            <div class="action-meta">
+
+                <span>
+                    Risk: Low
+                </span>
+
+                <span>
+                    Estimated: 20 sec
+                </span>
+
+                <span>
+                    Reversible
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="approve-btn"
+            onclick="approveAction(this)">
+
+            Approve
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= VIDEOS ================= -->
+
+<section class="section video-section">
+
+    <div class="section-header">
+
+        <div>
+
+            <p class="eyebrow">
+                OBSERVABILITY & INCIDENT RESPONSE
+            </p>
+
+            <h2>
+                Learn the Technology
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="video-grid">
+
+
+        <!-- VIDEO 1 -->
+
+        <div class="video-card">
+
+            <div class="video-container">
+
+                <iframe
+                    src="https://www.youtube.com/embed/d7d6JN0J3SQ"
+                    title="OpenTelemetry Is the Kubernetes of Observability"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+
+            <h3>
+                AI & Cloud Observability
+            </h3>
+
+            <p>
+                Learn how observability helps teams
+                understand modern distributed systems
+                using telemetry.
+            </p>
+
+        </div>
+
+
+
+        <!-- VIDEO 2 -->
+
+        <div class="video-card">
+
+            <div class="video-container">
+
+                <iframe
+                    src="https://www.youtube.com/embed/j1YR9wwUa8s"
+                    title="Intro to Grafana Incident"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+
+            <h3>
+                Incident Management
+            </h3>
+
+            <p>
+                Understand how incident-management
+                workflows can help teams investigate
+                and respond to production incidents.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= AUDIT ================= -->
+
+<section class="section" id="audit">
+
+    <div class="section-header">
+
+        <div>
+
+            <p class="eyebrow">
+                GOVERNANCE
+            </p>
+
+            <h2>
+                Audit Trail
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="audit-table">
+
+
+        <div class="audit-row header">
+
+            <span>Time</span>
+            <span>Agent</span>
+            <span>Action</span>
+            <span>Status</span>
+
+        </div>
+
+
+        <div class="audit-row">
+
+            <span>
+                10:45:32
+            </span>
+
+            <span>
+                Diagnosis Agent
+            </span>
+
+            <span>
+                Analyzed telemetry
+            </span>
+
+            <span class="success">
+                Completed
+            </span>
+
+        </div>
+
+
+        <div class="audit-row">
+
+            <span>
+                10:45:51
+            </span>
+
+            <span>
+                Reasoning Agent
+            </span>
+
+            <span>
+                Ranked hypotheses
+            </span>
+
+            <span class="success">
+                Completed
+            </span>
+
+        </div>
+
+
+        <div class="audit-row">
+
+            <span>
+                10:46:10
+            </span>
+
+            <span>
+                Remediation Agent
+            </span>
+
+            <span>
+                Prepared rollback
+            </span>
+
+            <span class="pending">
+                Awaiting approval
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div>
+
+        <strong>
+            SentinelAI
+        </strong>
+
+        <p>
+            Autonomous Incident Intelligence Platform
+        </p>
+
+    </div>
+
+
+    <div>
+        AI-powered • Human-governed • Auditable
+    </div>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
